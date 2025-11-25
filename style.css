@@ -51,19 +51,23 @@
 
   <script src="game.js"></script>
   <script>
-    // Скрытие всех лишних элементов при старте игры
     const playBtn = document.getElementById('playBtn');
     const startScreen = document.getElementById('startScreen');
+
     playBtn.addEventListener('click', () => {
+      // Скрываем стартовый экран
       startScreen.style.display = 'none';
-      // Прячем все элементы логотипа и авторства после старта
-      const logos = document.querySelectorAll('.brand-re, .credit, header');
-      logos.forEach(el => el && (el.style.display = 'none'));
+      // Убираем SD / SPACE DOG элементы, если они есть
+      const logo = document.querySelector('.logo');
+      const titleText = document.querySelector('.title-text');
+      if (logo) logo.remove();
+      if (titleText) titleText.remove();
+
       startGame();
     });
 
     function startGame() {
-      // Основной код запуска игры здесь
+      // Основной код игры здесь
     }
   </script>
 </body>
