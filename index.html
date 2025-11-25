@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Space Dodge — RE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top-left brand + bottom-right credit (always visible) -->
+  <div class="brand-re">RE</div>
+  <div class="credit">by marchesssik & nantenka</div>
+
+  <!-- START / LOADING SCREEN -->
+  <div id="startScreen" class="start-screen">
+    <div class="start-inner">
+      <h1 class="game-title">SPACE DODGE</h1>
+      <div id="loadingBar" class="loading-bar">
+        <div class="loading-progress" style="width:0%"></div>
+      </div>
+      <div class="loading-text" id="loadingText">Loading assets...</div>
+      <button id="playBtn" class="play-btn" aria-label="Play">PLAY</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <div class="logo">SD</div>
+        <div>
+          <h1>Space Dodge</h1>
+          <div class="muted">Уворачивайся от метеоритов</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="chip">Score: <span id="score">0</span></div>
+        <div class="chip">Best: <span id="best">0</span></div>
+      </div>
+    </header>
+
+    <main class="game-area">
+      <section class="stage">
+        <canvas id="game"></canvas>
+
+        <div class="hud">
+          <div class="chip">Lives: <span id="lives">3</span></div>
+          <div class="chip">Speed: <span id="speed">1</span>x</div>
+        </div>
+
+        <!-- MOBILE TOUCH CONTROLS -->
+        <div id="touchControls" class="touch-controls" aria-hidden="false">
+          <button class="t-btn big" id="btnLeft">◀</button>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <button class="t-btn" id="btnUp">▲</button>
+            <button class="t-btn" id="btnDown">▼</button>
+          </div>
+          <button class="t-btn big" id="btnRight">▶</button>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <div style="margin-bottom:10px;font-weight:800">Выберите скин (папка <code>images/</code>)</div>
+        <select id="skinSelect" aria-label="Choose skin"></select>
+        <div class="skin-preview center" id="skinPreview">Preview</div>
+
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="shuffleBtn">Shuffle Meteors</button>
+        </div>
+
+        <div style="margin-top:12px;color:#9aa6bf;font-size:13px">
+          Разместите файлы в <code>images/</code>:
+          <ul style="margin:6px 0 0 16px;padding:0;font-size:13px;color:#bcd;">re_1.png, re_2.png, re_3.png, re_4.png, re_5.png</ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer-note">Готово для ПК и мобильных браузеров — положите папку <code>images/</code> в корень репозитория.</footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
