@@ -50,5 +50,21 @@
   </div>
 
   <script src="game.js"></script>
+  <script>
+    // Скрытие всех лишних элементов при старте игры
+    const playBtn = document.getElementById('playBtn');
+    const startScreen = document.getElementById('startScreen');
+    playBtn.addEventListener('click', () => {
+      startScreen.style.display = 'none';
+      // Прячем все элементы логотипа и авторства после старта
+      const logos = document.querySelectorAll('.brand-re, .credit, header');
+      logos.forEach(el => el && (el.style.display = 'none'));
+      startGame();
+    });
+
+    function startGame() {
+      // Основной код запуска игры здесь
+    }
+  </script>
 </body>
 </html>
