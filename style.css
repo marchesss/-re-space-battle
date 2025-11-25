@@ -3,38 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Space Dodge</title>
+  <title>(RE)SPACE</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HUD DECOR -->
-  <div class="brand-re">RE</div>
-  <div class="credit">by marchesssik & nantenka</div>
 
   <!-- LOADING / START SCREEN -->
   <div id="startScreen" class="start-screen">
     <div class="start-inner">
-      <h1 class="game-title">SPACE DODGE</h1>
+      <h1 class="game-title">(RE)SPACE</h1>
       <div class="loading-text">Loading...</div>
       <button id="playBtn" class="play-btn">PLAY</button>
     </div>
   </div>
 
   <div class="wrap">
-    <header>
-      <div class="title">
-        <div class="logo">SD</div>
-        <div>
-          <h1>Space Dodge</h1>
-          <div class="muted">Уворачивайся от метеоритов</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="chip">Score: <span id="score">0</span></div>
-        <div class="chip">Best: <span id="best">0</span></div>
-      </div>
-    </header>
-
     <main class="game-area">
       <section class="stage">
         <canvas id="game"></canvas>
